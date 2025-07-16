@@ -128,26 +128,7 @@ body::before {
     background-position-x: -200px;
   }
 }
-  .logout-btn {
-  background: none;
-  border: none;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  padding: 10px 10px;
-  cursor: pointer;
-  font-size: small;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.logout-btn:hover {
-  color: red;
-  transform: scale(1.1);
-  background: none;
-}
-
-.logout-btn:active {
-  color: blue;
-}
+ 
 }
 
 
