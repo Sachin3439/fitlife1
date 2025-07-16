@@ -105,7 +105,7 @@ export default function BMICalculator() {
               <option value="other">Other</option>
             </select>
           </div>
-          <button type="submit">Calculate BMI</button>
+          <button type="submit" onClick={calculateBMI}>Calculate BMI</button>
         </form>
 
         {bmi && (
