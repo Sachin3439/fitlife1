@@ -120,7 +120,7 @@ function Dashboard() {
                 )}
               </>
             ) : (
-              <p>No diet plan selected yet. <a href="/diet">Choose a diet plan</a></p>
+              <p>No diet plan selected yet. <a href="/bmi">Choose a diet plan</a></p>
             )}
           </div>
         </div>
