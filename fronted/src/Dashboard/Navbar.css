@@ -120,7 +120,7 @@ body {
    .logout-btn {
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: bold;
   padding: 10px 10px;
   cursor: pointer;
