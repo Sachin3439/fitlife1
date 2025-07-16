@@ -15,6 +15,10 @@ export default function BMICalculator() {
 
   const navigate = useNavigate();
 
+    const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL,
+});
+
   const calculateBMI = (e) => {
     e.preventDefault();
 
@@ -49,7 +53,7 @@ export default function BMICalculator() {
     const email = localStorage.getItem('userEmail');
     if (email) {
       try {
-        await axios.post('http://localhost:5000/bmi', {
+        await api.post('/bmi', {
           email,
           weight,
           height,
