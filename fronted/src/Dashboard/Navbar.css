@@ -121,19 +121,6 @@ body {
   #navul.show {
     max-height: 300px;
   }
-  #logom{
-    display: block;
-    font-size: 25px;
-  margin-right: auto;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: animate 10s linear infinite;
-  position: relative;
-  left: -135px;
-  top:5px;
-  }
+  
 }
 
