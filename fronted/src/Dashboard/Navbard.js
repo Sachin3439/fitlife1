@@ -39,7 +39,8 @@ function Navbar() {
         <li><Link to="/chatbot">Chatbot</Link></li>
         
         <li>
-          <button onClick={handleLogout} className="logout-btn">Logout</button>
+          <button onClick={handleLogout} className="logout-btn" style={{ color: 'black' }}>Logout</button>
+
         </li>
       </ul>
     </nav>
