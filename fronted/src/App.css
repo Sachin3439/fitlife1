@@ -116,8 +116,11 @@ body::before {
 .logout-btn:active {
   color: blue;
 }
+  #nav{
+    max-height:400px;
+  }
    #navul.show {
-    max-height: 500px;
+    max-height: 400px;
   }
   #logo{
     display:none;
@@ -130,9 +133,6 @@ body::before {
     max-height: 0;
   }
 
-  #navul.show {
-    max-height: 300px;
-  }
   #logom{
     display: block;
     font-size: 25px;
