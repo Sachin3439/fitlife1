@@ -103,7 +103,7 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 393px) {
+@media (min-width: 393px) {
   
   #menu-toggle {
     display: flex;
