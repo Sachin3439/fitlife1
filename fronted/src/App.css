@@ -103,7 +103,7 @@ body::before {
   font-weight: bold;
   padding: 10px 10px;
   cursor: pointer;
-  font-size: medium;
+   font-size: larger;
   transition: transform 0.3s, color 0.3s;
 }
 
