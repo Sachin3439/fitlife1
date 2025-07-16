@@ -96,6 +96,12 @@ body::before {
     position: relative;
     left: 170px;
   }
+  .logout-btn {
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    color: white;
+  }
   #logo{
     display:none;
   }
