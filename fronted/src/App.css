@@ -128,8 +128,7 @@ body::before {
     background-position-x: -200px;
   }
 }
-}
-.logout-btn {
+  .logout-btn {
   background: none;
   border: none;
   color: rgb(0, 0, 0);
@@ -149,6 +148,8 @@ body::before {
 .logout-btn:active {
   color: blue;
 }
+}
+
 
 
 
