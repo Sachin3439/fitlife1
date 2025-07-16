@@ -116,6 +116,9 @@ body::before {
 .logout-btn:active {
   color: blue;
 }
+   #navul.show {
+    max-height: 350px;
+  }
   #logo{
     display:none;
   }
