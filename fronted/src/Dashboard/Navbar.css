@@ -118,9 +118,5 @@ body {
     max-height: 0;
   }
   
-  #navul.show {
-    max-height: 500px;
-  }
-  
 }
 
