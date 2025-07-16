@@ -11,7 +11,7 @@ const otpStore = {};
 
 const app = express();
 app.use(cors({
-  origin: [ 'https://fitlife1-f6t1.vercel.app'],
+  origin: [ 'https://fitlife1.vercel.app'],
   methods:["POST","GET"],
   credentials:true
 }));
