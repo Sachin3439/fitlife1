@@ -1,0 +1,54 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+
+
+/* Nav Links */
+#navul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+
+
+#navul li a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Hamburger Icon */
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  
+}
+
+#menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+
+}
+

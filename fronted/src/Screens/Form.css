@@ -1,0 +1,112 @@
+#formdiv {
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+
+
+form {
+  max-width: 350px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  background: linear-gradient(90deg, #5c6bc0, #66a6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 5s infinite alternate;
+}
+
+@keyframes colorShift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 8px #5c6bc0;
+  border-color: #5c6bc0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #5c6bc0, #66a6ff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+}
+
+.signup-text, #forget {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.signup,
+#forgetlink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signup:hover,
+#forgetlink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+

@@ -1,0 +1,125 @@
+/* DietPlanPage.css */
+body{
+    background-color: rgb(133, 126, 126);
+}
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f4f4f4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  animation: slideDown 0.6s ease-in-out;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-in-out;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+}
+
+td {
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+tr:hover td {
+  background-color: #e6f7ec;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 0.85rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+    min-width: 100%;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}

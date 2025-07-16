@@ -1,0 +1,134 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar container */
+#nav {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+/* Nav menu list */
+#navul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Nav links */
+#navul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 14px;
+  display: block;
+  transition: color 0.3s;
+}
+
+#navul li a:hover {
+  color: red;
+}
+
+#navul li a:active {
+  color: blue;
+}
+/* Logo */
+#logo {
+  font-size: 35px;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
+}
+
+/* Logo Animation */
+@keyframes animate {
+  to {
+    background-position-x: -200px;
+  }
+}
+/* Logout button */
+.logout-btn {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 15px 14px;
+  cursor: pointer;
+  font-size: medium;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+  color: red;
+  transform: scale(1.1);
+  background: none;
+}
+
+.logout-btn:active {
+  color: blue;
+}
+
+/* Hamburger Menu Icon */
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: flex;
+  }
+
+  #navul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  #navul.show {
+    max-height: 500px;
+  }
+
+  #navul li a,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #logo {
+    display: none;
+  }
+}

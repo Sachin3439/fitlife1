@@ -1,0 +1,216 @@
+.chat-page {
+  height: 100vh;
+  padding-top: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+
+
+
+.chat-container {
+  width: 420px;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  animation: float 4s ease-in-out infinite, gradientBorder 8s linear infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animated 3D Tilt on Hover */
+.chat-container:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Border Animation */
+.chat-container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #6e8efb, #a777e3);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientBorder 8s ease infinite;
+}
+
+/* Subtle Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Moving Gradient Border */
+@keyframes gradientBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.chat-container h2 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
+.message {
+  max-width: 75%;
+  padding: 12px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  animation: fadeInMessage 0.4s ease;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #667eea;
+  color: white;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #e2e8f0;
+  color: #333;
+}
+
+
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 12px;
+  background: #f9f9f9;
+  border-top: 2px solid #e0e0e0;
+  width: 100%;
+}
+
+/* Unique Animated Input */
+.input-area input {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 2px solid #667eea;
+  border-radius: 20px;
+  outline: none;
+  background: linear-gradient(135deg, #ffffff, #f2f3ff);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  transition: all 0.4s ease, transform 0.2s ease;
+}
+
+/* Focus animation with glowing border and slight bounce */
+.input-area input:focus {
+  border-color: #764ba2;
+  background: linear-gradient(135deg, #e0e4ff, #ffffff);
+  box-shadow: 0 8px 16px rgba(118, 75, 162, 0.4);
+  transform: scale(1.02);
+}
+
+/* Smooth placeholder transition */
+.input-area input::placeholder {
+  color: #999;
+  transition: color 0.3s;
+}
+
+.input-area input:focus::placeholder {
+  color: #764ba2;
+}
+
+
+/* 🎨 Stylish Send Button */
+.input-area button {
+  width: 100px;
+  padding: 15px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  transform: translate(0px,-3px);
+}
+
+.input-area button:hover {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 6px 18px rgba(110, 142, 251, 0.5);
+  transform: scale3d(1.5)
+}
+
+.input-area button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+
+/* Thinking dots */
+.thinking-indicator {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #667eea;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar Styling */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}

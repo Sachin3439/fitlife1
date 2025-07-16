@@ -1,0 +1,208 @@
+/* src/components/FitnessImportance.css */
+
+.fitness-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom right, #f0f4f8, #e0f7fa);
+  min-height: 100vh;
+}
+
+/* Header */
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.heading h2 {
+  font-size: 42px;
+  color: #222;
+  font-weight: bold;
+  background: linear-gradient(to right, #00c853, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.image-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* ✨ Beautified hover effect */
+.image-card:hover {
+  transform: scale(1.03) rotateZ(0.5deg);
+  box-shadow: 0 25px 60px rgba(0, 255, 128, 0.25);
+}
+
+.image-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* Optional: Add glow border on hover */
+.image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: border 0.4s ease;
+}
+
+.image-card:hover::before {
+  border: 2px solid rgba(0, 200, 100, 0.3);
+  box-shadow: 0 0 15px rgba(0, 200, 100, 0.4);
+}
+
+/* Benefit Cards */
+.benefits {
+  display: grid;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: linear-gradient(to right, #ffffff, #f3faff);
+  border-left: 6px solid #00c853;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(40px);
+  opacity: 0;
+  animation: slideFadeUp 0.9s ease-out forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🔥 Glow & slide hover effect */
+.benefit-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0, 200, 83, 0.2);
+  border-left: 6px solid #00e676;
+}
+
+/* 🌟 Glow circle animation */
+.benefit-card::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0, 200, 83, 0.2), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.benefit-card:hover::after {
+  transform: scale(1.4) rotate(15deg);
+}
+
+/* ✨ Icon bounce effect on hover */
+.benefit-card .icon {
+  font-size: 36px;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.benefit-card:hover .icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* 🎯 Text shifts slightly */
+.benefit-card .text {
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.benefit-card:hover .text {
+  transform: translateX(5px);
+}
+
+.benefit-card .text h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.benefit-card .text p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* 🚀 Animation on scroll */
+@keyframes slideFadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  .benefit-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-card {
+    width: 90%;
+  }
+}

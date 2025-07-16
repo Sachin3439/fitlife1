@@ -1,0 +1,258 @@
+/* 🌈 Animated Gradient Background for Body */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+ background: linear-gradient(-45deg, 
+  #f3ec78,        /* soft yellow */
+  #ff6f61,        /* coral red */
+  #af4261,        /* rich raspberry */
+  #5c6bc0,        /* indigo blue */
+  #00c9ff,        /* sky blue */
+  #92fe9d,        /* light green */
+  #67b26f,        /* fresh green */
+  #34495e,        /* dark blue-gray */
+  #2c3e50         /* deep navy */
+);
+
+
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Optional soft overlay layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* nav container */
+#nav{
+   background: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+   width: 100%;
+  z-index: 100;
+}
+#navul li a {
+  color: rgb(11, 11, 11);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+#menu-toggle span {
+  background-color: rgb(12, 12, 12);
+}
+/* Logo */
+#logo {
+  font-size: 35px;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
+}
+
+/* Logo Animation */
+@keyframes animate {
+  to {
+    background-position-x: -200px;
+  }
+}
+
+#logom{
+  display: none;
+}
+/* Mobile Responsive */
+@media (max-width: 393px) {
+  
+  #menu-toggle {
+    display: flex;
+    position: relative;
+    left: 170px;
+  }
+
+  #navul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  #navul.show {
+    max-height: 300px;
+  }
+  #logom{
+    display: block;
+    font-size: 25px;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
+  position: relative;
+  left: -135px;
+  top:5px;
+  }
+  /* Logo Animation */
+@keyframes animate {
+  to {
+    background-position-x: -200px;
+  }
+}
+}
+
+
+/* Form Container */
+#formdiv {
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form Box */
+form {
+  max-width: 320px;
+  width: 100%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s;
+}
+
+form:hover {
+  transform: scale(1.02);
+}
+
+/* Form Title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #5c6bc0, #af4261);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Inputs and Selects */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #5c6bc0;
+  box-shadow: 0 0 8px rgba(92, 107, 192, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #5c6bc0, #3f51b5);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.4s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #3f51b5, #303f9f);
+  transform: scale(1.03);
+}
+
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  #formdiv{
+   
+    padding-top:5px;
+  }
+  form {
+    max-width: 94%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+  }
+}
+/* Signup Text */
+.signup-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Signup Link */
+.signup {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signup:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+#top{
+  padding-top: 5rem;
+}
