@@ -107,7 +107,7 @@ body {
   #menu-toggle {
     display: flex;
     position: relative;
-    left: 170px;
+    left: 100px;
   }
 
   #navul {
@@ -135,5 +135,8 @@ body {
   left: -135px;
   top:5px;
   }
+  #logo{
+    display:none;
+}
 }
 
