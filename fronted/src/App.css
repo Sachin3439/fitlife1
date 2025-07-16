@@ -117,7 +117,7 @@ body::before {
   color: blue;
 }
    #navul.show {
-    max-height: 350px;
+    max-height: 500px;
   }
   #logo{
     display:none;
