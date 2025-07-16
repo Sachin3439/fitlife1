@@ -37,7 +37,7 @@ function Navbar() {
         <li><Link to="/bmi">BMI Calculator</Link></li>
         <li><Link to="/exercise">Exercise Tips</Link></li>
         <li><Link to="/chatbot">Chatbot</Link></li>
-        
+        <li><Link to="/contactd">Contact</Link></li>
         <li>
           <button onClick={handleLogout} className="logout-btn">Logout</button>
         </li>
