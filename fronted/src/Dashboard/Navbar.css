@@ -102,10 +102,13 @@ body {
   transition: all 0.3s;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
+/* Mobile Responsive */
+@media (max-width: 393px) {
+  
   #menu-toggle {
     display: flex;
+    position: relative;
+    left: 170px;
   }
 
   #navul {
@@ -117,16 +120,23 @@ body {
   }
 
   #navul.show {
-    max-height: 500px;
+    max-height: 300px;
   }
-
-  #navul li a,
-  .logout-btn {
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  #logom{
+    display: block;
+    font-size: 25px;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
+  position: relative;
+  left: -135px;
+  top:5px;
   }
+}
 
   #logo {
     display: none;
