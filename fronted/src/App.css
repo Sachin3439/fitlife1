@@ -89,7 +89,7 @@ body::before {
   display: none;
 }
 /* Mobile Responsive */
-@media (min-width: 393px) {
+@media (max-width: 393px) {
   
   #menu-toggle {
     display: flex;
