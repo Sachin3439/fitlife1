@@ -11,7 +11,9 @@ const otpStore = {};
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://fitlife-lemon-seven.vercel.app']
+  origin: [ 'https://fitlife1-f6t1.vercel.app'],
+  methods:["POST","GET"],
+  credentials:true
 }));
 
 app.use(express.json());
