@@ -49,7 +49,7 @@ export default function BMICalculator() {
       alert("Please select a diet preference.");
       return;
     }
-
+       if (!bmi) return alert("Please calculate BMI first!");
     const email = localStorage.getItem('userEmail');
     if (email) {
       try {
