@@ -90,16 +90,15 @@ body {
 #menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
   cursor: pointer;
 }
 
 #menu-toggle span {
-  width: 25px;
   height: 3px;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s;
+  width: 25px;
+  background-color: black;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
 /* Mobile Responsive */
