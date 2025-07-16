@@ -28,7 +28,9 @@ function Navbar() {
         <span></span>
         <span></span>
       </div>
-
+          <h1 id='logom' style={{
+            backgroundImage: `url(${green})`,
+          }}>Fitlife</h1>
       {/* Nav Links */}
       <ul id="navul" className={menuOpen ? 'show' : ''}>
         <li><Link to="/dashboardhome">Dashboard</Link></li>
