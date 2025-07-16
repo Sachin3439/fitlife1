@@ -96,12 +96,26 @@ body::before {
     position: relative;
     left: 170px;
   }
-  .logout-btn {
-    display: block;
-    margin-left: auto;
-    margin-top: 10px;
-    color: white;
-  }
+   .logout-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: medium;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+  color: red;
+  transform: scale(1.1);
+  background: none;
+}
+
+.logout-btn:active {
+  color: blue;
+}
   #logo{
     display:none;
   }
